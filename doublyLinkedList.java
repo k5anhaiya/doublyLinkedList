@@ -30,7 +30,9 @@ public class  doublyLinkedList{
         f.prev=e;
         f.next=null;
         Node head =a;
+        Node tail =f;
         displayDoublyLinkedList(head);
+        reverseDisplyDoublyLinkedList(tail);
         
     }
     private static void displayDoublyLinkedList(doublyLinkedList.Node head) {
@@ -38,6 +40,15 @@ public class  doublyLinkedList{
         while (currentNode!=null) {
             System.out.print(currentNode.data+" ");
             currentNode=currentNode.next;
+        }
+    }
+    private static void reverseDisplyDoublyLinkedList(doublyLinkedList.Node tail){
+        System.out.println();
+        Node currentNode = tail;
+        while (currentNode!=null) {
+            System.out.print(currentNode.data+" ");
+            currentNode = currentNode.prev;
+            
         }
     }
 }
