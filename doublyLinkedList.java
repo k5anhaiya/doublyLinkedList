@@ -33,6 +33,8 @@ public class  doublyLinkedList{
         Node tail =f;
         displayDoublyLinkedList(head);
         reverseDisplyDoublyLinkedList(tail);
+        Node newHead = insertionAtHead(head, 25);
+        displayDoublyLinkedList(newHead);
         
     }
     private static void displayDoublyLinkedList(doublyLinkedList.Node head) {
@@ -50,5 +52,15 @@ public class  doublyLinkedList{
             currentNode = currentNode.prev;
             
         }
+    }
+    private static Node insertionAtHead(doublyLinkedList.Node head,int x){
+        System.out.println();
+        Node currentNode=head;
+        Node p1=new Node(x);
+        p1.next=head;
+        head.prev=p1;
+        head=p1;
+        return head;
+
     }
 }
